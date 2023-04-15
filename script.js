@@ -36,9 +36,9 @@ function game() {
 
     let playerScore = 0;
     let computerScore = 0;
-    let round;
+    let round = 0;
 
-    for (round = 0; round < 5; round++) {
+    while (round < 5) {
         let playerSelection = prompt("What do you choose?", "");
         playerSelection = playerSelection.toLowerCase();
         let computerSelection = getComputerChoice();
@@ -46,8 +46,10 @@ function game() {
         console.log(result);
         if (result.includes("won")) {
             playerScore++;
+            round++;
         } else if (result.includes("lose")) {
             computerScore++;
+            round++;
         }
       }
     
