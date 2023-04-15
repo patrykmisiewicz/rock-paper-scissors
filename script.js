@@ -1,3 +1,6 @@
+// Function that generates 
+// (fair enough) random choice
+
 function getComputerChoice() {
 
     let number = Math.random()
@@ -12,7 +15,8 @@ function getComputerChoice() {
         
     }
 
-
+// Function used to play a round
+// Wish to make it shorter in future
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -31,6 +35,12 @@ function playRound(playerSelection, computerSelection) {
         return "You can only choose rock, scissors or paper!";
     }
 }
+
+// Final function
+// First try of use loop function "for"
+// Changed to "while" because function was stopping
+// When rounds reached 5, even though
+// Score was under 5 
 
 function game() {
 
