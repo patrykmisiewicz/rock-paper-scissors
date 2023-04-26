@@ -23,7 +23,13 @@ Changed "for" to "while";
 
 Works;
 
-Waiting to add GUI;
+Make buttons to play single round;
+
+Add round limit and make scoreboard;
+
+Display sentence round result;
+
+Add basics of interface;
 
 
 

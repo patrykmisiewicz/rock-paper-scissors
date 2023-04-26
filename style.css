@@ -1,0 +1,59 @@
+.background{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    color: white;
+  }
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/newscms/2016_11/1016196/rock-paper-scissors-today-tease-160317.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(6px); 
+}
+
+.game-interface {
+    position: relative;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px; 
+}
+
+.scoreboard {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    background-color: #a55e17d2;
+}
+
+.round {
+    margin-bottom: 20px;
+    background-color: #a55e17d2;
+    padding: 15px;
+    border-radius:15px;
+}
+
+.buttons {
+    display:flex;
+    gap: 10px;
+    background-color: #a55e17d2;
+    padding: 15px;
+    border-radius:15px;
+}
