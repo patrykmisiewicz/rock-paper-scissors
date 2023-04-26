@@ -74,4 +74,32 @@ function game() {
 }
 }
     
-game();
+// game();
+
+const rock = document.querySelector('.rock');
+
+rock.addEventListener('click', function () {
+
+    let computerSelection = getComputerChoice();
+    console.log(playRound('rock',computerSelection));
+
+});
+
+const paper = document.querySelector('.paper');
+
+paper.addEventListener('click', function () {
+
+    let computerSelection = getComputerChoice();
+    console.log(playRound('paper',computerSelection));
+
+});
+
+const scissors = document.querySelector('.scissors');
+
+scissors.addEventListener('click', function () {
+
+    let computerSelection = getComputerChoice();
+    console.log(playRound('scissors',computerSelection));
+
+});
+
