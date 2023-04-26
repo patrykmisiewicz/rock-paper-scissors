@@ -1,6 +1,9 @@
 // Function that generates 
 // (fair enough) random choice
 
+let playerScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
 
     let number = Math.random()
@@ -24,12 +27,12 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "rock" && computerSelection === "paper" ||
     playerSelection === "scissors" && computerSelection === "rock" ||
     playerSelection === "paper" && computerSelection === "scissors") {
-        
+        computerScore++;
         return `You lose, ${computerSelection} beats ${playerSelection}!`;
     } else if (playerSelection === "paper" && computerSelection === "rock" ||
     playerSelection === "rock" && computerSelection === "scissors" ||
     playerSelection === "scissors" && computerSelection === "paper") {
-        
+        playerScore++;
         return `You won, ${playerSelection} beats ${computerSelection}!`;
     } else {
         return "You can only choose rock, scissors or paper!";
@@ -76,12 +79,30 @@ function game() {
     
 // game();
 
+function result () {
+    if (playerScore == 5) {
+        console.log(`player won ${playerScore} : ${computerScore}`);
+        playerScore = 0;
+        computerScore = 0;
+        score.innerHTML = `${playerScore} : ${computerScore}`;
+    } else if (computerScore == 5) {
+        console.log(`player lose ${playerScore} : ${computerScore}`);
+        computerScore = 0;
+        playerScore = 0;
+        score.innerHTML = `${playerScore} : ${computerScore}`;
+    }
+}
+
+const score = document.querySelector('.score');
+
 const rock = document.querySelector('.rock');
 
 rock.addEventListener('click', function () {
 
     let computerSelection = getComputerChoice();
     console.log(playRound('rock',computerSelection));
+    score.innerHTML = `${playerScore} : ${computerScore}`;
+    result();
 
 });
 
@@ -91,6 +112,8 @@ paper.addEventListener('click', function () {
 
     let computerSelection = getComputerChoice();
     console.log(playRound('paper',computerSelection));
+    score.innerHTML = `${playerScore} : ${computerScore}`;
+    result();
 
 });
 
@@ -100,6 +123,10 @@ scissors.addEventListener('click', function () {
 
     let computerSelection = getComputerChoice();
     console.log(playRound('scissors',computerSelection));
-
+    score.innerHTML = `${playerScore} : ${computerScore}`;
+    result();
 });
+
+
+
 
