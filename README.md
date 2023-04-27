@@ -29,7 +29,16 @@ Add round limit and make scoreboard;
 
 Display sentence round result;
 
-Add basics of interface;
+Add basics of UI;
+
+Fix bug in function connected with buttons where playerChoice was everytime rock;
+
+Make score display final result (there was bug where it was displaying only up to 4:x);
+
+Improve UI;
+
+Remove console.log and game function as they were useless now;
+
 
 
 
