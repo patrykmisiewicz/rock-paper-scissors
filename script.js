@@ -5,7 +5,6 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-
 function getComputerChoice() {
 
     let number = Math.random()
@@ -41,59 +40,21 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// Final function
-// First try of use loop function "for"
-// Changed to "while" because function was stopping
-// When rounds reached 5, even though
-// Score was under 5 
-
-function game() {
-
-    let playerScore = 0;
-    let computerScore = 0;
-    let round = 0;
-
-    while (round < 5) {
-        let playerSelection = prompt("What do you choose?", "");
-        playerSelection = playerSelection.toLowerCase();
-        let computerSelection = getComputerChoice();
-        let result = playRound(playerSelection, computerSelection);
-        console.log(result);
-        if (result.includes("won")) {
-            playerScore++;
-            round++;
-        } else if (result.includes("lose")) {
-            computerScore++;
-            round++;
-        }
-      }
-    
-      if (round === 5) {
-        if (playerScore > computerScore) {
-          console.log(`${playerScore} : ${computerScore}! You win!`);
-        } else if (playerScore < computerScore) {
-          console.log(`${playerScore} : ${computerScore}! You lose!`);
-        } else {
-          console.log(`${playerScore} : ${computerScore}! Draw!`);
-    }
-}
-}
-    
-// game();
-
 function result () {
     if (playerScore == 5) {
         console.log(`player won ${playerScore} : ${computerScore}`);
+        score.innerHTML = `${playerScore} : ${computerScore}`;
         playerScore = 0;
         computerScore = 0;
-        score.innerHTML = `${playerScore} : ${computerScore}`;
-        alert("Computer is the winner!")
+        round.innerHTML += " You are the winner!"
     } else if (computerScore == 5) {
         console.log(`player lose ${playerScore} : ${computerScore}`);
+        score.innerHTML = `${playerScore} : ${computerScore}`;
         computerScore = 0;
         playerScore = 0;
+        round.innerHTML += " Computer is the winner!";
+    } else {
         score.innerHTML = `${playerScore} : ${computerScore}`;
-        alert("Computer is the winner!")
     }
 }
 
@@ -116,7 +77,7 @@ const paper = document.querySelector('.paper');
 paper.addEventListener('click', function () {
 
     let computerSelection = getComputerChoice();
-    round.innerHTML = (playRound('rock',computerSelection));
+    round.innerHTML = (playRound('paper',computerSelection));
     score.innerHTML = `${playerScore} : ${computerScore}`;
     result();
 
@@ -127,7 +88,7 @@ const scissors = document.querySelector('.scissors');
 scissors.addEventListener('click', function () {
 
     let computerSelection = getComputerChoice();
-    round.innerHTML = (playRound('rock',computerSelection));
+    round.innerHTML = (playRound('scissors',computerSelection));
     score.innerHTML = `${playerScore} : ${computerScore}`;
     result();
 });
