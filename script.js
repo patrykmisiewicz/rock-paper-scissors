@@ -19,8 +19,7 @@ function getComputerChoice() {
         
     }
 
-// Function used to play a round
-// Wish to make it shorter in future
+// Function to play a round
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
@@ -40,15 +39,16 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// Function for updating score
+// and displaying game result
+
 function result () {
     if (playerScore == 5) {
-        console.log(`player won ${playerScore} : ${computerScore}`);
         score.innerHTML = `${playerScore} : ${computerScore}`;
         playerScore = 0;
         computerScore = 0;
         round.innerHTML += " You are the winner!"
     } else if (computerScore == 5) {
-        console.log(`player lose ${playerScore} : ${computerScore}`);
         score.innerHTML = `${playerScore} : ${computerScore}`;
         computerScore = 0;
         playerScore = 0;
@@ -61,6 +61,8 @@ function result () {
 const score = document.querySelector('.score');
 const round = document.querySelector('.round')
 
+// Play ROCK in single round
+
 const rock = document.querySelector('.rock');
 
 rock.addEventListener('click', function () {
@@ -72,6 +74,8 @@ rock.addEventListener('click', function () {
 
 });
 
+// Play PAPER in single round
+
 const paper = document.querySelector('.paper');
 
 paper.addEventListener('click', function () {
@@ -82,6 +86,8 @@ paper.addEventListener('click', function () {
     result();
 
 });
+
+// Play SCISSORS in single round
 
 const scissors = document.querySelector('.scissors');
 

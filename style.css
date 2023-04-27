@@ -1,8 +1,12 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #3F3D40;
+}
+
 .background{
     position: relative; 
     height: 100vh;
     width: 100%;
-    color: white;
   }
 
 .background::before {
@@ -39,29 +43,33 @@
     padding-left: 30px;
     padding-bottom: 20px;
     border-radius: 15px;
-    background-color: #a55e17e8;
+    background-color: #D9BC66;
     font-size: 30px;
+    box-shadow: 0 0 10px 5px #a58217;
 }
 
 .round {
     margin-bottom: 20px;
-    background-color: #a55e17e8;
+    background-color: #D9BC66;
     padding: 15px;
     border-radius:15px;
     font-size: 30px;
+    box-shadow: 0 0 10px 5px #a58217;
 }
 
 .buttons {
     display:flex;
     gap: 10px;
-    background-color: #a55e17e8;
+    background-color: #D9BC66;
     padding: 15px;
-    border-radius:15px;
+    border-radius: 15px;
+    border: #a58217 5px;
+    box-shadow: 0 0 10px 5px #a58217;
 }
 
 button {
-    background: #a53b17;
-    color: white;
+    background: #BF9460;
+    color: #282629;
     border-radius: 10px;
     font-size: 30px;
     padding: 15px;
