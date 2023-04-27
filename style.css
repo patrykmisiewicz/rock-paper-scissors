@@ -37,23 +37,32 @@
     margin-bottom: 20px;
     padding-right: 30px;
     padding-left: 30px;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     border-radius: 15px;
-    background-color: #a55e17d2;
+    background-color: #a55e17e8;
+    font-size: 30px;
 }
 
 .round {
     margin-bottom: 20px;
-    background-color: #a55e17d2;
+    background-color: #a55e17e8;
     padding: 15px;
     border-radius:15px;
+    font-size: 30px;
 }
 
 .buttons {
     display:flex;
     gap: 10px;
-    background-color: #a55e17d2;
+    background-color: #a55e17e8;
     padding: 15px;
     border-radius:15px;
+}
+
+button {
+    background: #a53b17;
+    color: white;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 15px;
 }
